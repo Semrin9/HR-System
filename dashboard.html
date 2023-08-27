@@ -138,20 +138,22 @@
             <nav class="navigation">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link parent-link active">
                             <img src="assets/icons/dashboard.svg" alt="Dashboard" class="nav-link-icon">
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link null">
+                        <a href="#" class="nav-link parent-link null">
                             <img src="assets/icons/report.svg" alt="Organization" class="nav-link-icon">
                             <span class="nav-link-text">Organization</span>
-                            <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            <button class="nav-link-plus-button">
+                                <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            </button>
                         </a>
 
-                        <ul class="nav-link-expand">
+                        <ul class="nav-link-expand nav-link-expand-hidden">
                             <li class="nav-link-expand-item">
                                 <a href="#" class="nav-link null">
                                     <img src="assets/icons/location.svg" alt="Location" class="nav-link-icon">
@@ -183,13 +185,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link null">
+                        <a href="#" class="nav-link parent-link null">
                             <img src="assets/icons/user.svg" alt="Employees" class="nav-link-icon">
                             <span class="nav-link-text">Employees</span>
-                            <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            <button class="nav-link-plus-button">
+                                <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            </button>
                         </a>
 
-                        <ul class="nav-link-expand">
+                        <ul class="nav-link-expand nav-link-expand-hidden">
                             <li class="nav-link-expand-item">
                                 <a href="#" class="nav-link null">
                                     <img src="assets/icons/user.svg" alt="Employees" class="nav-link-icon">
@@ -214,13 +218,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link null">
+                        <a href="#" class="nav-link parent-link null">
                             <img src="assets/icons/budget.svg" alt="Timesheet" class="nav-link-icon">
                             <span class="nav-link-text">Timesheet</span>
-                            <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            <button class="nav-link-plus-button">
+                                <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            </button>
                         </a>
 
-                        <ul class="nav-link-expand">
+                        <ul class="nav-link-expand nav-link-expand-hidden">
                             <li class="nav-link-expand-item">
                                 <a href="#" class="nav-link null">
                                     <img src="assets/icons/attendance.svg" alt="Attendance" class="nav-link-icon">
@@ -238,13 +244,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link null">
+                        <a href="#" class="nav-link parent-link null">
                             <img src="assets/icons/card.svg" alt="Payroll" class="nav-link-icon">
                             <span class="nav-link-text">Payroll</span>
-                            <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            <button class="nav-link-plus-button">
+                                <img src="assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon">
+                            </button>
                         </a>
 
-                        <ul class="nav-link-expand">
+                        <ul class="nav-link-expand nav-link-expand-hidden">
                             <li class="nav-link-expand-item">
                                 <a href="#" class="nav-link null">
                                     <img src="assets/icons/template.svg" alt="Payroll Template" class="nav-link-icon">
@@ -517,6 +525,8 @@
             </div>
         </div>
     </div>
+
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>
