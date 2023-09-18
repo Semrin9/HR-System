@@ -326,6 +326,11 @@
       row-gap: 12px;
     }
 
+    .content-grid-one .grid-one-item:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
     .content-grid-two {
       grid-template-columns: repeat(2, 1fr);
     }
