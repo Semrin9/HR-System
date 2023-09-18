@@ -429,4 +429,7 @@
     margin-top: 5px;
     opacity: 0.9;
 }
-  
+.grid-c5-content img {
+    width: 100%;
+    height: 175px;
+}
