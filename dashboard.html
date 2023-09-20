@@ -7,6 +7,15 @@
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="css/dash.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/themes/dark_turquoise.min.js"></script>
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+
 </head>
 
 <style>
@@ -208,13 +217,6 @@
                                     <span class="nav-link-text">Transfer</span>
                                 </a>
                             </li>
-
-                            <li class="nav-link-expand-item">
-                                <a href="#" class="nav-link null">
-                                    <img src="assets/icons/history.svg" alt="History" class="nav-link-icon">
-                                    <span class="nav-link-text">History</span>
-                                </a>
-                            </li>
                         </ul>
                     </li>
 
@@ -295,7 +297,7 @@
                 <div class="content-grid-one">
                     <div class="grid-one-item grid-common grid-c1">
                         <div class="grid-c-title">
-                            <h3 class="grid-c-title-text">Title 1</h3>
+                            <h3 class="grid-c-title-text">Total Jobs</h3>
                             <button class="grid-c-title-icon">
                                 <img src="assets/icons/plus.svg">
                             </button>
@@ -307,7 +309,7 @@
 
                     <div class="grid-one-item grid-common grid-c2">
                         <div class="grid-c-title">
-                            <h3 class="grid-c-title-text">Title 2</h3>
+                            <h3 class="grid-c-title-text">Total Employees</h3>
                             <button class="grid-c-title-icon">
                                 <img src="assets/icons/plus.svg">
                             </button>
@@ -319,12 +321,13 @@
 
                     <div class="grid-one-item grid-common grid-c3">
                         <div class="grid-c-title">
-                            <h3 class="grid-c-title-text">Title 3</h3>
+                            <h3 class="grid-c-title-text">Total Salary</h3>
                             <button class="grid-c-title-icon">
                                 <img src="assets/icons/plus.svg">
                             </button>
                         </div>
                         <div class="grid-c1-content">
+
                         </div>
                     </div>
                 </div>
@@ -332,110 +335,56 @@
                 <div class="content-grid-two">
                     <div class="grid-two-item grid-common grid-c4">
                         <div class="grid-c-title">
-                            <h3 class="grid-c-title-text">Budget</h3>
+                            <h3 class="grid-c-title-text">Employee Distribution</h3>
                             <button class="grid-c-title-icon">
                                 <img src="assets/icons/plus.svg">
                             </button>
                         </div>
 
                         <div class="grid-c-top text-silver-v1">
-                            <h2 class="lg-value">Cash</h2>
-                            <span class="lg-value">$ 100,000</span>
+                            <h2 class="lg-value">Place</h2>
+                            <span class="lg-value">Number</span>
                         </div>
 
-                        <div class="grid-c4-content bg-jet">
+                        <div class="grid-c4-content">
                             <div class="grid-items">
-                                <div class="grid-item">
+                                <div class="grid-item bg-jet">
                                     <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Subscriptions <span>Automated</span></p>
+                                        <p class="text text-silver-v1">USA</p>
                                     </div>
 
                                     <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 22000</span>
+                                        <span class="text-silver-v1">1000</span>
                                     </div>
                                 </div>
 
-                                <div class="grid-item">
+                                <div class="grid-item bg-jet">
                                     <div class="grid-item-l">
-                                        <div class="icon"><img src="assets/icons/check.svg"></div>
-                                        <p class="text text-silver-v1">Loan Payment <span>Automated</span></p>
+                                        <p class="text text-silver-v1">Turkey</p>
+                                    </div>
+                                    <div class="grid-item-r">
+                                        <span class="text-silver-v1">200</span>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item bg-jet">
+                                    <div class="grid-item-l">
+                                        <p class="text text-silver-v1">Jordan</p>
                                     </div>
 
                                     <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 16000</span>
+                                        <span class="text-silver-v1">100</span>
                                     </div>
                                 </div>
 
-                                <div class="grid-item">
+                                <div class="grid-item bg-jet">
                                     <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Foodstuff <span>Automated</span></p>
+                                        <p class="text text-silver-v1">Egypt</p>
                                     </div>
 
                                     <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 20000</span>
+                                        <span class="text-silver-v1">100</span>
                                     </div>
-                                </div>
-
-                                <div class="grid-item">
-                                    <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Subscriptions <span></span></p>
-                                    </div>
-                                    <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 10000</span>
-                                    </div>
-                                </div>
-
-                                <div class="grid-item">
-                                    <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Subscriptions <span></span></p>
-                                    </div>
-
-                                    <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 40000</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid-two-item">
-                        <div class="subgrid-two">
-                            <div class="subgrid-two-item grid-common grid-c5">
-                                <div class="grid-c-title">
-                                    <h3 class="grid-c-title-text">Title 5</h3>
-                                    <button class="grid-c-title-icon">
-                                        <img src="assets/icons/plus.svg">
-                                    </button>
-                                </div>
-
-                                <div class="grid-c5-content">
-
-
-                                </div>
-                            </div>
-
-                            <div class="subgrid-two-item grid-common grid-c6">
-                                <div class="grid-c-title">
-                                    <h3 class="grid-c-title-text">Title 6</h3>
-                                    <button class="grid-c-title-icon">
-                                        <img src="assets/icons/plus.svg">
-                                    </button>
-                                </div>
-
-                                <div class="grid-c5-content">
-                                    <img src="assets/icons/world.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -443,80 +392,104 @@
 
                     <div class="grid-two-item grid-common grid-c4">
                         <div class="grid-c-title">
-                            <h3 class="grid-c-title-text">Budget</h3>
+                            <h3 class="grid-c-title-text">Employee Distribution</h3>
+                            <button class="grid-c-title-icon">
+                                <img src="assets/icons/plus.svg">
+                            </button>
+                        </div>
+
+                        <div class="grid-c4-content">
+                            <canvas id="canvas" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+
+                    <div class="grid-two-item grid-common grid-c4">
+                        <div class="grid-c-title">
+                            <h3 class="grid-c-title-text">Employees</h3>
                             <button class="grid-c-title-icon">
                                 <img src="assets/icons/plus.svg">
                             </button>
                         </div>
 
                         <div class="grid-c-top text-silver-v1">
-                            <h2 class="lg-value">Cash</h2>
-                            <span class="lg-value">$ 100,000</span>
+                            <h2 class="lg-value">Name</h2>
+                            <span class="lg-value">Position</span>
                         </div>
 
-                        <div class="grid-c4-content bg-jet">
+                        <div class="grid-c4-content">
                             <div class="grid-items">
-                                <div class="grid-item">
+                                <div class="grid-item bg-jet">
                                     <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Subscriptions <span>Automated</span></p>
+                                        <p class="text text-silver-v1">Asmaa</p>
                                     </div>
 
                                     <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 22000</span>
+                                        <span class="text-silver-v1">Software Engineer</span>
                                     </div>
                                 </div>
 
-                                <div class="grid-item">
+                                <div class="grid-item bg-jet">
                                     <div class="grid-item-l">
-                                        <div class="icon"><img src="assets/icons/check.svg"></div>
-                                        <p class="text text-silver-v1">Loan Payment <span>Automated</span></p>
+                                        <p class="text text-silver-v1">Abdullah</p>
                                     </div>
 
                                     <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 16000</span>
+                                        <span class="text-silver-v1">Developer</span>
                                     </div>
                                 </div>
 
-                                <div class="grid-item">
+                                <div class="grid-item bg-jet">
                                     <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Foodstuff <span>Automated</span></p>
+                                        <p class="text text-silver-v1">Rama</p>
                                     </div>
 
                                     <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 20000</span>
+                                        <span class="text-silver-v1">Programmer</span>
                                     </div>
                                 </div>
 
-                                <div class="grid-item">
+                                <div class="grid-item bg-jet">
                                     <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Subscriptions <span></span></p>
+                                        <p class="text text-silver-v1">Anas</p>
                                     </div>
                                     <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 10000</span>
+                                        <span class="text-silver-v1">Cyber security</span>
                                     </div>
                                 </div>
 
-                                <div class="grid-item">
-                                    <div class="grid-item-l">
-                                        <div class="icon">
-                                            <img src="assets/icons/check.svg">
-                                        </div>
-                                        <p class="text text-silver-v1">Subscriptions <span></span></p>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                    <div class="grid-item-r">
-                                        <span class="text-silver-v1">$ 40000</span>
-                                    </div>
-                                </div>
+                <div class="content-grid-three">
+                    <div class="grid-three-item grid-common grid-c7">
+                        <div class="grid-c-title">
+                            <h3 class="grid-c-title-text">Locations</h3>
+                            <button class="grid-c-title-icon">
+                                <img src="assets/icons/plus.svg">
+                            </button>
+                        </div>
+
+                        <div class="grid-c5-content bg-jet">
+                            <div class="grid-c4-content">
+                                <img src="assets/icons/world.svg" alt="World map">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-three-item grid-common grid-c8">
+                        <div class="grid-c-title">
+                            <h3 class="grid-c-title-text">Locations</h3>
+                            <button class="grid-c-title-icon">
+                                <img src="assets/icons/plus.svg">
+                            </button>
+                        </div>
+
+                        <div class="grid-c5-content bg-jet">
+                            <div class="grid-c6-content">
+                                <div id="container"></div>
                             </div>
                         </div>
                     </div>
@@ -524,7 +497,10 @@
             </div>
         </div>
     </div>
+    </div>
 
+
+    <script src="javascript/chart.js"></script>
     <script src="javascript/script.js"></script>
 </body>
 
