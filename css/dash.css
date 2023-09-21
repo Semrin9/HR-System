@@ -82,6 +82,7 @@
     display: flex;
     align-items: center;
     justify-content: flex;
+    margin-top: 4px;
     padding: 6px 14px;
     column-gap: 12px;
     letter-spacing: 0.03em;
@@ -182,6 +183,7 @@
     .nav-link-expand-item {
         padding: 0 0 0 0.5rem;
         column-gap: 0;
+        margin: 0;
     }
 
     .nav-link-expand-item .nav-link-icon {
