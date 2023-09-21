@@ -104,7 +104,6 @@
     width: 22px;
 }
 
-
 .nav-link-plus-button {
     margin-left: auto;
 }
@@ -112,6 +111,17 @@
 .nav-link-plus-icon {
     width: 1.1rem;
     margin-left: auto;
+    transition: var(--transition-default);
+}
+
+.nav-link-minus-icon {
+    width: 0.95rem;
+    margin-left: auto;
+    transition: var(--transition-default);
+}
+
+.nav-link-plus-icon-hidden {
+    display: none;
 }
 
 .nav-link-text {
@@ -199,9 +209,11 @@
     }
 
     .nav-link-text,
-    .nav-link-plus-icon {
+    .nav-link-plus-icon,
+    .nav-link-minus-icon {
         display: none;
     }
+
 }
 
 @media screen and (max-width: 420px) {

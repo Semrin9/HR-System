@@ -4,15 +4,28 @@ const sidebarToggler = document.querySelector('.sidebar-toggler');
 const sidebar = document.querySelector('.sidebar');
 
 
-navLinks.forEach(function(link) {
-    link.addEventListener("click", function() {
+navLinks.forEach(function (link, index) {
+    link.addEventListener("click", function () {
         // Remove active class from all links
-        navLinks.forEach(function(navLink) {
+        navLinks.forEach(function (navLink) {
             navLink.classList.remove("active");
         });
 
         // Add active class to the clicked link
         this.classList.add("active");
+
+
+        const plusIcon = link.querySelector('.nav-link-plus-icon');
+        const minusIcon = link.querySelector('.nav-link-minus-icon');
+
+        if (plusIcon.classList.contains('nav-link-plus-icon-hidden')) {
+            plusIcon.classList.remove('nav-link-plus-icon-hidden');
+            minusIcon.classList.add('nav-link-plus-icon-hidden');
+            
+        } else {
+            plusIcon.classList.add('nav-link-plus-icon-hidden');
+            minusIcon.classList.remove('nav-link-plus-icon-hidden');
+        }
     });
 });
 
