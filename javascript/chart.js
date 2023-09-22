@@ -106,10 +106,10 @@ window.myRadar = new Chart(document.getElementById("canvas"), config);
 anychart.onDocumentReady(function () {
 	      // create data set
       var data = anychart.data.set([
-        ['Main Page', 115200],
-        ['Documentation', 35850],
-        ['Features', 75900],
-        ['Gallery', 59500]
+        ['USA', 40],
+        ['Turkey', 30],
+        ['Jordan', 55],
+        ['Egypt', 20]
       ]);
 
       // create pie chart with passed data
@@ -128,7 +128,7 @@ anychart.onDocumentReady(function () {
       var label = anychart.standalones.label();
       label
         .enabled(true)
-        .text('Fill this later')
+        .text('Total Employees')
         .width('100%')
         .height('100%')
         .adjustFontSize(true, true)
