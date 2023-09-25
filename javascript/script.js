@@ -42,3 +42,59 @@ parentLinks.forEach(link => {
 sidebarToggler.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-change');
 });
+
+
+
+// Table Related
+
+const search = document.querySelector('.input-group input'),
+tableRows = document.querySelectorAll('tbody tr'),
+tableHeadings = document.querySelectorAll('thead th');
+
+// Searching for specific data of HTML table
+search.addEventListener('input', searchTable);
+
+function searchTable() {
+    tableRows.forEach((row, i) => {
+        let tableData = row.textContent.toLowerCase(),
+            searchData = search.value.toLowerCase();
+
+        row.classList.toggle('hide', tableData.indexOf(searchData) < 0);
+        row.style.setProperty('--delay', i / 25 + 's');
+    })
+
+    document.querySelectorAll('tbody tr:not(.hide)').forEach((visibleRow, i) => {
+        visibleRow.style.backgroundColor = (i % 2 == 0) ? 'transparent' : '#0000000b';
+    });  //fix this
+}
+
+
+// Sorting | Ordering data of HTML table
+tableHeadings.forEach((head, i) => {
+    let sort_asc = true;
+    head.onclick = () => {
+        tableHeadings.forEach(head => head.classList.remove('active'));
+        head.classList.add('active');
+
+        document.querySelectorAll('td').forEach(td => td.classList.remove('active'));
+        tableRows.forEach(row => {
+            row.querySelectorAll('td')[i].classList.add('active');
+        })
+
+        head.classList.toggle('asc', sort_asc);
+        sort_asc = head.classList.contains('asc') ? false : true;
+
+        sortTable(i, sort_asc);
+    }
+})
+
+
+function sortTable(column, sort_asc) {
+    [...tableRows].sort((a, b) => {
+        let firstRow = a.querySelectorAll('td')[column].textContent.toLowerCase(),
+            secondRow = b.querySelectorAll('td')[column].textContent.toLowerCase();
+
+        return sort_asc ? (firstRow < secondRow ? 1 : -1) : (firstRow < secondRow ? -1 : 1);
+    })
+        .map(sortedRow => document.querySelector('tbody').appendChild(sortedRow));
+}
