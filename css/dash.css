@@ -491,8 +491,8 @@ canvas {
 /* Table */
 
 .table {
-    width: 82vw;
-    height: 90vh;
+    width: 100%;
+    height: 52vh;
     background-color: var(--clr-primary);
     border-radius: .8rem;
 
@@ -501,7 +501,7 @@ canvas {
 
 .table-header {
     width: 100%;
-    height: 8%;
+    height: 15%;
     padding: 0.5rem 1rem;
     color: var(--clr-white);
     border-bottom: 2px solid var(--clr-primar-light);
@@ -514,7 +514,7 @@ canvas {
 .table-header .input-group {
     width: 17%;
     height: 90%;
-    background-color: var(--clr-primar-light);
+    background-color: var(--clr-jet);
     padding: 0 .8rem;
     border-radius: 1.5rem;
 
@@ -578,37 +578,33 @@ table {
     width: 100%;
 }
 
-td img {
-    width: 36px;
-    height: 36px;
-    margin-right: .5rem;
-    border-radius: 50%;
-
-    vertical-align: middle;
-}
-
 table, th, td {
     border-collapse: collapse;
     padding: 1rem;
     text-align: left;
 }
 
+thead {
+    /* border-bottom: solid 3px var(--clr-blu); */
+}
+
 thead th {
     position: sticky;
     top: 0;
     /* left: 0; */
-    background-color: #d5d1defe;
+    background-color: #777777;
     cursor: pointer;
     text-transform: capitalize;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #0000000b;
+    background-color: #352d28;
 }
 
 tbody tr {
     --delay: .1s;
     transition: .5s ease-in-out var(--delay), background-color 0s;
+    color: var(--clr-silver-v1);
 }
 
 tbody tr td,
@@ -620,7 +616,7 @@ tbody tr.hide td,
 tbody tr.hide td button {
     padding: 0;
     font: 0 / 0 sans-serif;
-    transition: .2s ease-in-out .5s;
+    transition: .4s ease-in-out .2s;
 }
 
 @media (max-width: 1000px) {
@@ -643,7 +639,7 @@ tbody tr.hide td button {
     transition: .2s ease-in-out;
 }
 
-thead th:hover span.icon-arrow{
+thead th:hover span.icon-arrow {
     border: 1.4px solid var(--clr-blu);
 }
 
@@ -651,15 +647,73 @@ thead th:hover {
     color: var(--clr-blu);
 }
 
-thead th.active span.icon-arrow{
-    background-color: var(--clr-blu);
-    color: #fff;
+thead th.active span.icon-arrow {
+    /* background-color: var(--clr-blu); */
+    color: var(--clr-blu);
+    border: 1px solid var(--clr-blu);
 }
 
-thead th.asc span.icon-arrow{
+thead th.asc span.icon-arrow {
     transform: rotate(180deg);
 }
 
-thead th.active,tbody td.active {
+thead th.active {
     color: var(--clr-blu);
+}
+
+/* Form section */
+
+
+.form-header {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1.25rem;
+}
+
+.add-button {
+    width: 150px;
+    height: 2.5rem;
+    background-color: var(--clr-blu);
+    border-radius: .6rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-primary);
+    border-radius: .8rem;
+    padding: 1rem;
+}
+
+form {
+    width: 95%;
+    height: 100%;
+    margin: 0.8rem auto;
+}
+
+input[type="text"] {
+    width: 40%;
+    height: 2.5rem;
+    background-color: var(--clr-jet);
+    border-radius: .6rem;
+    border: none;
+    outline: none;
+    padding: 0 .5rem;
+    font-size: 0.9rem;
+    color: var(--clr-white);
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--clr-silver-v1);
 }
