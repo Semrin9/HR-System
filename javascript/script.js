@@ -61,11 +61,17 @@ function searchTable() {
 
         row.classList.toggle('hide', tableData.indexOf(searchData) < 0);
         row.style.setProperty('--delay', i / 25 + 's');
+
+        // Hide the entire <td> element containing the buttons
+        let buttonsCell = row.querySelector('td:last-child');
+        if (buttonsCell) {
+            buttonsCell.style.display = tableData.indexOf(searchData) < 0 ? 'none' : 'table-cell';
+        }
     })
 
     document.querySelectorAll('tbody tr:not(.hide)').forEach((visibleRow, i) => {
         visibleRow.style.backgroundColor = (i % 2 == 0) ? 'transparent' : '#352d28';
-    });  //fix this
+    }); 
 }
 
 
