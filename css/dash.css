@@ -667,7 +667,7 @@ canvas {
 
 .table-body {
     width: 94%;
-    max-height: calc(89% - 3.5rem);
+    max-height: calc(89% - 4rem);
     background-color: var(--clr-jet);
 
     margin-top: 1.5rem;
@@ -829,7 +829,8 @@ form {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="number"] {
     width: 100%;
     height: 3.3rem;
     background-color: var(--clr-jet);
@@ -843,19 +844,22 @@ input[type="tel"] {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+input[type="number"]:focus {
     box-shadow: 0 0 0 1.5px var(--clr-blu);
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
-input[type="tel"]::placeholder {
+input[type="tel"]::placeholder,
+input[type="number"]::placeholder {
     color: var(--clr-silver-v1);
 }
 
 input[type="text"]:focus::placeholder,
 input[type="email"]:focus::placeholder,
-input[type="tel"]:focus::placeholder {
+input[type="tel"]:focus::placeholder,
+input[type="number"]:focus::placeholder {
     color: transparent;
 }
 
