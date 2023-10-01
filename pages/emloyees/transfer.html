@@ -4,8 +4,316 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transfer</title>
+    <link rel="stylesheet" href="../../css/dash.css">
 </head>
+
 <body>
-    
+    <div class="app">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="info-img img-fit-cover">
+                    <img src="../../assets/images/blulogix.gif" alt="Blu-img">
+                </div>
+                <h2 class="info-name"><span>BLU</span>LOGIX</h2>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../dashboard.html" class="nav-link parent-link active">
+                            <img src="../../assets/icons/dashboard.svg" alt="Dashboard" class="nav-link-icon">
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link parent-link null">
+                            <img src="../../assets/icons/report.svg" alt="Organization" class="nav-link-icon">
+                            <span class="nav-link-text">Organization</span>
+                            <button class="nav-link-plus-button" data-toggle="plus-minus">
+                                <img src="../../assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon"
+                                    id="plus-icon">
+                                <img src="../../assets/icons/minus.svg" alt="Minus"
+                                    class="nav-link-minus-icon nav-link-plus-icon-hidden" id="minus-icon">
+                            </button>
+                        </a>
+
+                        <ul class="nav-link-expand nav-link-expand-hidden">
+                            <li class="nav-link-expand-item">
+                                <a href="../organization/location.html" class="nav-link null">
+                                    <img src="../../assets/icons/location.svg" alt="Location" class="nav-link-icon">
+                                    <span class="nav-link-text">Location</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-link-expand-item">
+                                <a href="../organization/location.html" class="nav-link null">
+                                    <img src="../../assets/icons/department.svg" alt="Department" class="nav-link-icon">
+                                    <span class="nav-link-text">Department</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-link-expand-item">
+                                <a href="../organization/role.html" class="nav-link null">
+                                    <img src="../../assets/icons/role.svg" alt="Role" class="nav-link-icon">
+                                    <span class="nav-link-text">Role</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-link-expand-item">
+                                <a href="../organization/policy.html" class="nav-link null">
+                                    <img src="../../assets/icons/policy.svg" alt="Policies" class="nav-link-icon">
+                                    <span class="nav-link-text">Policies</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link parent-link null">
+                            <img src="../../assets/icons/user.svg" alt="Employees" class="nav-link-icon">
+                            <span class="nav-link-text">Employees</span>
+                            <button class="nav-link-plus-button" data-toggle="plus-minus">
+                                <img src="../../assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon"
+                                    id="plus-icon">
+                                <img src="../../assets/icons/minus.svg" alt="Minus"
+                                    class="nav-link-minus-icon nav-link-plus-icon-hidden" id="minus-icon">
+                            </button>
+                        </a>
+
+                        <ul class="nav-link-expand nav-link-expand-hidden">
+                            <li class="nav-link-expand-item">
+                                <a href="../emloyees/employee.html" class="nav-link null">
+                                    <img src="../../assets/icons/user.svg" alt="Employees" class="nav-link-icon">
+                                    <span class="nav-link-text">Employees</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-link-expand-item">
+                                <a href="../emloyees/transfer.html" class="nav-link null">
+                                    <img src="../../assets/icons/transfer.svg" alt="Transfer" class="nav-link-icon">
+                                    <span class="nav-link-text">Transfer</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link parent-link null">
+                            <img src="../../assets/icons/budget.svg" alt="Timesheet" class="nav-link-icon">
+                            <span class="nav-link-text">Timesheet</span>
+                            <button class="nav-link-plus-button" data-toggle="plus-minus">
+                                <img src="../../assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon"
+                                    id="plus-icon">
+                                <img src="../../assets/icons/minus.svg" alt="Minus"
+                                    class="nav-link-minus-icon nav-link-plus-icon-hidden" id="minus-icon">
+                            </button>
+                        </a>
+
+                        <ul class="nav-link-expand nav-link-expand-hidden">
+                            <li class="nav-link-expand-item">
+                                <a href="../timesheet/attendance.html" class="nav-link null">
+                                    <img src="../../assets/icons/attendance.svg" alt="Attendance" class="nav-link-icon">
+                                    <span class="nav-link-text">Attendance</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-link-expand-item">
+                                <a href="../timesheet/updateAttendance.html" class="nav-link null">
+                                    <img src="../../assets/icons/update.svg" alt="Update Attendance"
+                                        class="nav-link-icon">
+                                    <span class="nav-link-text">Update Attendance</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link parent-link null">
+                            <img src="../..//assets/icons/card.svg" alt="Payroll" class="nav-link-icon">
+                            <span class="nav-link-text">Payroll</span>
+                            <button class="nav-link-plus-button" data-toggle="plus-minus">
+                                <img src="../../assets/icons/plus-add.svg" alt="Plus" class="nav-link-plus-icon"
+                                    id="plus-icon">
+                                <img src="../../assets/icons/minus.svg" alt="Minus"
+                                    class="nav-link-minus-icon nav-link-plus-icon-hidden" id="minus-icon">
+                            </button>
+                        </a>
+
+                        <ul class="nav-link-expand nav-link-expand-hidden">
+                            <li class="nav-link-expand-item">
+                                <a href="../payroll/payrollTemplate.html" class="nav-link null">
+                                    <img src="../../assets/icons/template.svg" alt="Payroll Template"
+                                        class="nav-link-icon">
+                                    <span class="nav-link-text">Payroll Template</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="main-content-top">
+                <div class="content-top-left">
+                    <button type="button" class="sidebar-toggler">
+                        <img src="../../assets/icons/menu.svg" alt="Button">
+                    </button>
+                    <h3 class="content-top-title">Transfers</h3>
+                </div>
+
+                <div class="content-top-btns">
+                    <button type="button" class="settings-btn content-top-btn">
+                        <img src="../../assets/icons/settings.svg" alt="Search">
+                    </button>
+
+                    <button type="button" class="notification-btn content-top-btn">
+                        <img src="../../assets/icons/bell.svg" alt="Bell">
+                        <span class="notification-btn-dot"></span>
+                    </button>
+
+                    <button type="button" class="logout-btn content-top-btn">
+                        <img src="../../assets/icons/logout.svg" alt="logout">
+                    </button>
+                </div>
+            </div>
+
+            <div class="main-content-holder-2">
+                <div class="form">
+                    <section class="form-header">
+                        <h1>Transfer an Employee</h1>
+                    </section>
+                    <section class="form-body">
+                        <form action="" method="post">
+                            <div class="form-row">
+                                <select id="employee" name="employee">
+                                    <option value="" disabled selected>Select an employee</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Egypt">Egypt</option>
+                                </select> 
+
+                                <select id="location" name="location">
+                                    <option value="" disabled selected>Select location</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Egypt">Egypt</option>
+                                </select> 
+                            </div>
+                            <div class="form-row">
+                                <textarea name="description" id="description" placeholder="Enter transfer description..."></textarea>
+                            </div>
+                            <div class="submit-form">
+                                <button type="submit" class="add-button" value="add">Transfer</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="table">
+                    <section class="table-header">
+                        <h1>List All Transfers</h1>
+                        <div class="input-group">
+                            <input type="search" placeholder="Search Data...">
+                            <img src="../../assets/icons/search.svg" alt="">
+                        </div>
+                    </section>
+                    <section class="table-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                                    <th> Employee <span class="icon-arrow">&UpArrow;</span></th>
+                                    <th> From <span class="icon-arrow">&UpArrow;</span></th>
+                                    <th> To <span class="icon-arrow">&UpArrow;</span></th>
+                                    <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                                    <th> Action <span class="icon-arrow">&UpArrow;</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Abdullah</td>
+                                    <td>Jordan</td>
+                                    <td>USA</td>
+                                    <td>07/10/2024</td>
+                                    <td>
+                                        <button class="btn btn-edit">Edit</button>
+                                        <button class="btn btn-delete">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>Saed</td>
+                                    <td>Turkey</td>
+                                    <td>Jordan</td>
+                                    <td>07/10/2024</td>
+                                    <td>
+                                        <button class="btn btn-edit">Edit</button>
+                                        <button class="btn btn-delete">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>Rama</td>
+                                    <td>Jordan</td>
+                                    <td>USA</td>
+                                    <td>07/10/2024</td>
+                                    <td>
+                                        <button class="btn btn-edit">Edit</button>
+                                        <button class="btn btn-delete">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>Anas</td>
+                                    <td>Jordan</td>
+                                    <td>Turkey</td>
+                                    <td>07/10/2024</td>
+                                    <td>
+                                        <button class="btn btn-edit">Edit</button>
+                                        <button class="btn btn-delete">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>John Doe</td>
+                                    <td>USA</td>
+                                    <td>Turkey</td>
+                                    <td>07/10/2024</td>
+                                    <td>
+                                        <button class="btn btn-edit">Edit</button>
+                                        <button class="btn btn-delete">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>6</td>
+                                    <td>Asmaa</td>
+                                    <td>USA</td>
+                                    <td>Turkey</td>
+                                    <td>07/10/2024</td>
+                                    <td>
+                                        <button class="btn btn-edit">Edit</button>
+                                        <button class="btn btn-delete">Delete</button>
+                                    </td>
+                                </tr>
+                        </table>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../javascript/chart.js"></script>
+    <script src="../../javascript/script.js"></script>
 </body>
+
 </html>
