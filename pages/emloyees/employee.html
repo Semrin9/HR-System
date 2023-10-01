@@ -39,7 +39,7 @@
 
                         <ul class="nav-link-expand nav-link-expand-hidden">
                             <li class="nav-link-expand-item">
-                                <a href="../location.html" class="nav-link null">
+                                <a href="../organization/location.html" class="nav-link null">
                                     <img src="../../assets/icons/location.svg" alt="Location" class="nav-link-icon">
                                     <span class="nav-link-text">Location</span>
                                 </a>
@@ -60,7 +60,7 @@
                             </li>
 
                             <li class="nav-link-expand-item">
-                                <a href="policy.html" class="nav-link null">
+                                <a href="../organization/policy.html" class="nav-link null">
                                     <img src="../../assets/icons/policy.svg" alt="Policies" class="nav-link-icon">
                                     <span class="nav-link-text">Policies</span>
                                 </a>
@@ -267,6 +267,11 @@
                         </table>
                     </section>
                 </div>
+                
+                <div class="add-button-container">
+                    <button class="add-form-button">Add form</button>
+                </div>
+
                 <div class="form">
                     <section class="form-header">
                         <h1>Add an Employee</h1>
@@ -274,13 +279,23 @@
                     <section class="form-body">
                         <form action="" method="post">
                             <div class="form-row">
-                                <input type="text" placeholder="Employee Name" name="name" id="name" required>
+                                <input type="text" placeholder="Name" name="name" id="name" required>
 
-                                <input type="number" placeholder="Employee Age" name="age" id="age" required>
+                                <input type="number" placeholder="Age" name="age" id="age" required>
 
-                                <input type="text" placeholder="Employee Job" name="job" id="job" required>
+                                <input type="text" placeholder="Job" name="job" id="job" required>
                            
                             </div>
+
+                            <div class="form-row">
+                                <input type="text" placeholder="Username" name="username" id="username required">
+
+                                <input type="text" placeholder="Phone" name="phone" id="phone" required>
+                                
+                                <input type="email" placeholder="Email" name="email" id="email" required>
+
+                            </div>
+
                             <div class="form-row">
                                 <select id="location" name="location">
                                     <option value="" disabled selected>Select location</option>
@@ -302,15 +317,13 @@
                                     <option value="female">Female</option>
                                 </select>
 
+                                <select name="payroll" id="payroll">
+                                    <option value="" disabled selected>Select payroll</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
                             </div>
 
-                            <div class="form-row">
-                                <input type="text" placeholder="Employee Username" name="username" id="username required">
-
-                                <input type="email" placeholder="Employee Email" name="email" id="email" required>
-
-                                <input type="text" placeholder="Employee Phone" name="phone" id="phone" required>
-                            </div>
                             <div class="submit-form">
                                 <button type="submit" class="add-button" value="add">Add new</button>
                             </div>

@@ -788,7 +788,8 @@ thead th.active {
     border-radius: .8rem;
 }
 
-.add-button {
+.add-button,
+.add-form-button {
     width: 10rem;
     height: 2.5rem;
     background-color: var(--clr-blu);
@@ -804,13 +805,14 @@ thead th.active {
     transition: ease-out .3s;
 }
 
-.add-button img {
-    width: 1.1rem;
-    height: 1.1rem;
-    margin-right: 0.5rem;
+.add-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
 }
 
-.add-button:hover {
+.add-button:hover,
+.add-form-button:hover {
     border: 1.5px solid var(--clr-white);
 }
 
@@ -931,10 +933,6 @@ option {
     transition: var(--transition-default);
 }
 
-.form-column {
-
-}
-
 .submit-form {
     display: flex;
     justify-content: flex-end;
@@ -968,35 +966,37 @@ option {
 }
 
 @media screen and (max-width: 1280px) {
-    .main-content-holder-2 {
+    .main-content-holder-2,
+    .main-content-holder {
         column-gap: 12px;
     }
     
-    .main-content-holder-2 .table {
+    .table {
         margin-top: 1rem;
     }
 
-    .main-content-holder-2 .form {
+    .form {
         margin-top: 1rem;
     }
 
-    .main-content-holder-2 .form-body {
+    .form-body {
         padding: 0.5rem;
     }
 
-    .main-content-holder-2 .form-row {
+    .form-row {
         margin-bottom: 0.8rem;
     }
 
-    .main-content-holder-2 .form-column {
+    .form-column {
         width: 100%;
     }
 
-    .main-content-holder-2 .submit-form {
+    .submit-form {
         margin-top: 0.8rem;
     }
 
-    .main-content-holder-2 .submit-form .add-button {
+    .submit-form .add-button,
+    .add-button-container .add-form-button {
         width: 8rem;
         height: 2.3rem;
         font-size: 0.8rem;
@@ -1012,23 +1012,33 @@ option {
         grid-template-columns: 1fr;
     }
 
-    .main-content-holder-2 .table {
+    .table {
         grid-row-start: 1;
         grid-row-end: 2;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .main-content-holder-2 .table {
+    .table {
         margin: 0;
     }
 
-    .main-content-holder-2 .form-body {
+    .form-body {
         padding: 0 0.5rem;
         height: 87%;
     }
 
+    .form-row:nth-child(2),
+    .form-row:nth-child(3) {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
 
+    .form-row:nth-child(2) input#email {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -1045,10 +1055,17 @@ option {
         gap: 0.6rem;
     }
 
-    input[type="text"], 
-    [type="email"],
-    input[type="tel"] {
-        height: 2.7rem;
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+        height: 2.7rem  !important;
+        padding-left: 0.5rem;
+    }
+
+    select {
+        height: 2.7rem  !important;
+        padding-left: 0.5rem;
     }
 
     .table-header .input-group {
