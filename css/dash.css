@@ -954,7 +954,7 @@ option {
 }
 
 .btn-delete {
-    margin-left: 0.5rem;
+    margin-top: 0.5rem;
     width: 3rem;
     height: 1.5rem;
     background-color: var(--clr-scarlet-v1);
