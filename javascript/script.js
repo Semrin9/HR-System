@@ -44,9 +44,11 @@ sidebarToggler.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-change');
 });
 
-formButton.addEventListener("click", () => {
-    form.classList.toggle('form-hidden');
-})
+if (formButton != null) {
+    formButton.addEventListener("click", () => {
+        form.classList.toggle('form-hidden');
+    })
+}
 
 // Table Related
 
