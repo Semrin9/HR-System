@@ -21,6 +21,7 @@
     --transition-default: all 300ms ease-in-out;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -209,6 +210,10 @@ button {
     background-color: var(--clr-blu);
     box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px,
      rgb(0 0 0 / 4%) 0px 10px 10px -5px;
+}
+
+.semi-active {
+    border: 2px solid var(--clr-blu);
 }
 
 .nav-link-icon {
@@ -817,9 +822,9 @@ thead th.active {
 }
 
 .form-body {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
+    width: 94%;
+    height: 73%;
+    margin: 1.5rem auto 0.8rem auto;
 }
 
 form {
@@ -964,6 +969,10 @@ option {
     font-weight: 500;
     font-size: 0.9rem;
     transition: ease-out .3s;
+}
+
+.form-hidden {
+    display: none;
 }
 
 @media screen and (max-width: 1280px) {

@@ -2,7 +2,8 @@ const parentLinks = document.querySelectorAll('.parent-link');
 var navLinks = document.querySelectorAll(".nav-link");
 const sidebarToggler = document.querySelector('.sidebar-toggler');
 const sidebar = document.querySelector('.sidebar');
-
+const formButton = document.querySelector('.add-form-button');
+const form = document.querySelector(".form");
 
 navLinks.forEach(function (link, index) {
     link.addEventListener("click", function () {
@@ -43,7 +44,9 @@ sidebarToggler.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-change');
 });
 
-
+formButton.addEventListener("click", () => {
+    form.classList.toggle('form-hidden');
+})
 
 // Table Related
 
